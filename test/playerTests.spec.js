@@ -1,10 +1,10 @@
-const should = require('chai').should();
+const assert = require('chai').assert;
 let Player = require('../lib/models/player');
 
-describe('Player', function(){
+describe('Player', function () {
 
     it('should exist', function () {
-        should.exist(new Player());
-      });
+        assert(Player);
+    });
 
 });
