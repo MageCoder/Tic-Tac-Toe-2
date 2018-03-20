@@ -1,4 +1,13 @@
 let Playfield = require('./lib/models/playfield');
 
-const playfield = new Playfield(30);
+let playfield = new Playfield(3);
+
+
+console.log(playfield.setPosition('2,3', 'X'));
+console.log(playfield.setPosition('2,3', 'O'));
+
+
 playfield.toConsole();
+
+
+
