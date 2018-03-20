@@ -44,13 +44,20 @@ describe('Playfield', function () {
         assert.isTrue(playfield.toConsole());
     });
 
-    it('should have a existsPosition function', function(){
-        assert(playfield.existsPosition instanceof Function);
+    it('should have a getPosition function', function(){
+        assert(playfield.getPosition instanceof Function);
     });
 
-    it('should check if given position exists',function(){
-        let position = '1,2';
-        assert.isTrue(playfield.existsPosition(position));
+    it('should check if given position exists and returns a value',function(){
+        assert.isNotNull(playfield.getPosition('1,3'));
+    });
+
+    it('should have a setPosition function', function(){
+        assert(playfield.setPosition instanceof Function);
+    });
+
+    it('should have a areAllPositionsSet function', function(){
+        assert(playfield.areAllPositionsSet instanceof Function);
     });
 
 });
