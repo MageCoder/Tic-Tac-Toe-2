@@ -10,16 +10,16 @@ describe('Game', () => {
     beforeEach(() => {
         playfield = new Playfield('6');
 
-        let listOfPlayers = new Array();
-        listOfPlayers.push(new Player('Andre', Player.HUMAN));
-        listOfPlayers.push(new Player('Peet', Player.HUMAN));
-        listOfPlayers.push(new Player('Rob', Player.BOT));
+        let listOfPlayer = new Array();
+        listOfPlayer.push(new Player('Andre', Player.HUMAN));
+        listOfPlayer.push(new Player('Peet', Player.HUMAN));
+        listOfPlayer.push(new Player('Rob', Player.BOT));
 
         let listOfSymbols = new Array();
         listOfSymbols.push('A');
         listOfSymbols.push('B');
 
-        game = new Game(playfield, listOfPlayers, listOfSymbols);
+        game = new Game(playfield, listOfPlayer, listOfSymbols);
     });
 
 
