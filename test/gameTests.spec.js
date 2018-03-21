@@ -1,9 +1,9 @@
 const assert = require('chai').assert;
 let Game = require('../lib/models/game');
 
-describe('Game', function () {
+describe('Game', () => {
 
-    it('should exist', function () {
+    it('should exist', () => {
         assert(Game);
     });
 

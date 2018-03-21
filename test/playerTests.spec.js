@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 let Player = require('../lib/models/player');
 
-describe('Player', function () {
+describe('Player', () => {
 
     let player, name, type;
 
@@ -11,19 +11,19 @@ describe('Player', function () {
         player = new Player(name, type);
     });
 
-    it('should exist', function () {
+    it('should exist', () => {
         assert(Player);
     });
 
-    it('should be possible to create a new player instance', function () {
+    it('should be possible to create a new player instance', () => {
         assert(player instanceof Object);
     });
 
-    it('should have a name attribute', function () {
+    it('should have a name attribute', () => {
         assert(player.name);
     });
 
-    it('should have a type attribute', function () {
+    it('should have a type attribute', () => {
         assert(player.type);
     });
 
