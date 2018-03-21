@@ -42,9 +42,8 @@ rl.on('line', (line) => {
                 listOfPlayer.push(new Player(player.name, player.type));
             }
 
-            playfield.toConsole();
 
-            let game = new Game();
+            let game = new Game(playfield, listOfPlayer, gameConf.symbols);
 
 
         } catch (error) {
