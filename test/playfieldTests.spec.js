@@ -94,8 +94,6 @@ describe('Playfield', function () {
             }
         }
 
-        playfield.toConsole();
-
         assert.isTrue(playfield.allSet());
     });
 
