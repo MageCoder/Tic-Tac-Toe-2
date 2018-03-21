@@ -28,17 +28,25 @@ describe('Player', function () {
     });
     
     it('should have a get game function', function () {
-        assert(player.getGame instanceof Function);
+        assert(player.getGameReference instanceof Function);
     });
 
     it('should have a set game function', function () {
-        assert(player.setGame instanceof Function);
+        assert(player.setGameReference instanceof Function);
     });
 
     it('should have a game reference attribute', function () {
-        player.setGame('G0815');
+        player.setGameReference('G0815');
         console.log(player.gameRef);
         assert(player.gameRef);
+    });
+
+    it('should have a reset game reference function', function () {
+        assert(player.resetGameReference instanceof Function);
+    });
+
+    it('should be able to reset game reference', function () {
+        assert.isNull(player.resetGameReference());
     });
 
 });
