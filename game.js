@@ -56,7 +56,7 @@ rl.on('line', (line) => {
     rl.prompt();
 
 }).on('close', () => {
-    console.log('Have a great day!');
+    console.log('Bye bye.');
     process.exit(0);
 });
 
