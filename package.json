@@ -4,7 +4,8 @@
   "description": "Tic Tac Toe game for 3 players",
   "main": "game.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "mocha; node game"
   },
   "repository": {
     "type": "git",

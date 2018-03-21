@@ -89,10 +89,12 @@ describe('Playfield', function () {
 
     it('should give a true if all postions are set', function () {
         for (let y = 1; y <= size; y++) {
-            for (let x = 0; x <= size; x++) {
+            for (let x = 1; x <= size; x++) {
                 playfield.setPosition(y + ',' + x, 'X');
             }
         }
+
+        playfield.toConsole();
 
         assert.isTrue(playfield.allSet());
     });
