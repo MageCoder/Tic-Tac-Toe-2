@@ -25,8 +25,9 @@ try {
 
     // init new game
     let game = new Game(playfield, listOfPlayer, gameConf.symbols);
-    // start game with first move
-    game.move();
+
+    // start game and init
+    game.start();
 
 
     // create and start interface
@@ -45,15 +46,14 @@ try {
         } else if (line === 'help') {
             console.log('Please use any of the following commands: quit | exit | q | help ');
         } else {
-
-            // move game after each input
-
-            
-            // position input of players and game reactions here
-
-            // handle input
-
-            // check if all set or won
+            //  validate input 
+            if (line && line.indexOf(',') > -1) {
+                if (!game.move(line)) {
+                    process.exit(0);
+                }
+            } else {
+                console.log('Please provide a valid positon by typing x,y');
+            }
         }
 
         rl.prompt();
@@ -69,7 +69,7 @@ try {
 
 
 } catch (error) {
-    console.log('An error occured. Will quit.');
+    console.log('An error occured. Will quit. ', error);
     process.exit(0);
 }
 

@@ -1,8 +1,8 @@
 {
     "playgroundSize": 3,
     "symbols": [
-        "X",
-        "O"
+        "A",
+        "B"
     ],
     "players": [
         {

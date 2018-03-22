@@ -2,10 +2,10 @@
   "name": "tic-tac-toe-2",
   "version": "1.0.0",
   "description": "Tic Tac Toe game for 3 players",
-  "main": "game.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha",
-    "start": "mocha; node game"
+    "start": "mocha; node main"
   },
   "repository": {
     "type": "git",
