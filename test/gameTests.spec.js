@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
-let Game = require('../lib/models/game');
-let Playfield = require('../lib/models/playfield');
-let Player = require('../lib/models/player');
+const Game = require('../lib/models/game');
+const Playfield = require('../lib/models/playfield');
+const Player = require('../lib/models/player');
 
 describe('Game', () => {
 
@@ -28,7 +28,7 @@ describe('Game', () => {
     });
 
     it('should be possible to create a new game instance with playfield, player and game symbols', () => {
-        assert(game instanceof Object);
+        assert.isObject(game);
     });
 
     it('should have a playfield attribute', () => {
@@ -42,5 +42,18 @@ describe('Game', () => {
     it('should have a symbols attribute', () => {
         assert(game.symbols);
     });
+
+    it('should have a private _getRandomNumber function', () => {
+        assert.isFunction(game._getRandomNumber);
+    });
+
+    it('should provide a random number', () => {
+        assert.isNumber(game._getRandomNumber(3));
+    });
+
+    it('should have a private _assignSymbolsToPlayers function', () => {
+        assert.isFunction(game._assignSymbolsToPlayers);
+    });
+
 
 });

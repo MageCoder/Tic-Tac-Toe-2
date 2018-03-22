@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-let Playfield = require('../lib/models/playfield');
+const Playfield = require('../lib/models/playfield');
 
 describe('Playfield', () => {
 
@@ -95,6 +95,10 @@ describe('Playfield', () => {
         }
 
         assert.isTrue(playfield.allSet());
+    });
+
+    it('should have a gameOver function', () => { 
+        assert.isFunction(playfield.gameOver);
     });
 
 });
