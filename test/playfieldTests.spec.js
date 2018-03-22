@@ -101,4 +101,37 @@ describe('Playfield', () => {
         assert.isFunction(playfield.gameOver);
     });
 
+    it('should be true if game is won', () => { 
+        
+        // playfield.setPosition('1,1', 'X');
+        // playfield.setPosition('1,2', 'X');
+        // playfield.setPosition('1,3', 'X');
+
+        // playfield.setPosition('1,1', 'X');
+        // playfield.setPosition('2,1', 'X');
+        // playfield.setPosition('3,1', 'X');
+        
+        // playfield.setPosition('1,1', 'X');
+        // playfield.setPosition('2,2', 'X');
+        // playfield.setPosition('3,3', 'X');
+
+        playfield.setPosition('3,1', 'X');
+        playfield.setPosition('2,2', 'X');
+        playfield.setPosition('1,3', 'X');
+
+        playfield.toConsole();
+      
+        assert.isTrue(playfield.gameOver('3,1', 'X'));
+    });
+
+    it('should be false if game is not won', () => { 
+        playfield.setPosition('3,1', 'X');
+        playfield.setPosition('2,2', 'O');
+        playfield.setPosition('1,3', 'X');
+
+        playfield.toConsole();
+      
+        assert.isFalse(playfield.gameOver('1,1', 'X'));
+    });
+
 });

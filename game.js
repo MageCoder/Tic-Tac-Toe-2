@@ -45,6 +45,10 @@ try {
         } else if (line === 'help') {
             console.log('Please use any of the following commands: quit | exit | q | help ');
         } else {
+
+            // move game after each input
+
+            
             // position input of players and game reactions here
 
             // handle input
