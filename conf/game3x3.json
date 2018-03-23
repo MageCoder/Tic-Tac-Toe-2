@@ -1,9 +1,9 @@
 {
     "playgroundSize": 3,
     "symbols": [
-        "A",
-        "B",
-        "C"
+        "X",
+        "O",
+        "Y"
     ],
     "players": [
         {
@@ -11,7 +11,7 @@
             "type": "human"
         },
         {
-            "name": "Max",
+            "name": "Julian",
             "type": "human"
         },
         {

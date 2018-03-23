@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require('chai').assert;
 const Game = require('../lib/models/game');
 const Playfield = require('../lib/models/playfield');

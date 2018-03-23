@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require('chai').assert;
 const Playfield = require('../lib/models/playfield');
 
@@ -54,6 +56,10 @@ describe('Playfield', () => {
 
     it('should return null if position does not exist', () => {
         assert.isNull(playfield.getPosition('1,4'));
+    });
+
+    it('should have a getEmptyPosition function', () => {
+        assert.isFunction(playfield.getEmptyPosition);
     });
 
     it('should have a setPosition function', () => {

@@ -1,5 +1,14 @@
 'use strict';
 
+/**
+ * Tic Tac Toe Game
+ * 
+ * @class main
+ * @description main game controller
+ * @author André Schubert andre.schubert78@gmail.com
+ * @version 1.0.0
+ */
+
 // filereader
 const fs = require('fs');
 
@@ -49,13 +58,21 @@ try {
             console.log('Please use any of the following commands: quit | exit | q | help ');
         } else {
             //  validate input 
-            // TODO: validate for number!!!
-            if (line && line.indexOf(',') > -1) {
+            let x = line.split(',')[0];
+            let y = line.split(',')[1];
+
+            console.log(typeof parseInt(x));
+
+            if (line && 
+                line.indexOf(',') > -1 &&
+                !isNaN(parseInt(x)) && 
+                !isNaN(parseInt(y))) {
+                    
                 if (!game.move(line)) {
                     process.exit(0);
                 }
             } else {
-                console.log('Please provide a valid positon by typing x,y');
+                console.log('Please provide a valid positon by typing x,y! x and y have to be a valid numbers!');
             }
         }
 

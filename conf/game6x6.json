@@ -2,11 +2,16 @@
     "playgroundSize": 6,
     "symbols": [
         "X",
-        "O"
+        "O",
+        "Z"
     ],
     "players": [
         {
             "name": "Andre",
+            "type": "human"
+        },
+        {
+            "name": "Julian",
             "type": "human"
         },
         {
