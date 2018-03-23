@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-let Player = require('../lib/models/player');
+const Player = require('../lib/models/player');
 
 describe('Player', () => {
 

@@ -1,3 +1,5 @@
+'use strict';
+
 // filereader
 const fs = require('fs');
 
@@ -47,6 +49,7 @@ try {
             console.log('Please use any of the following commands: quit | exit | q | help ');
         } else {
             //  validate input 
+            // TODO: validate for number!!!
             if (line && line.indexOf(',') > -1) {
                 if (!game.move(line)) {
                     process.exit(0);
