@@ -26,6 +26,8 @@ npm start
 ##  Configuration of the game
 The game is configured by json config files. These can be found in the projects conf folder.
 The configuration is loaded by the main game controller. Currently its hard coded to game3x3.json.
+In the config file you have tp provide the size of the playfield, the player and also the player
+symbols.
     
 
 ###  Rules - Wiki

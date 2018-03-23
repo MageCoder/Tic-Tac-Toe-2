@@ -1,0 +1,54 @@
+
+Requirement Analysis
+
+Main target
+* console game for max 3 players including 1 bot
+* tests (test folder)
+* explanation how to run the code (readme.md)
+* some kind of short documentation (requirement analysis)
+
+
+Conditions for ending the game
+* all fields are set - draw
+* diagonal set with the same symbols
+* complete row set with the same symbols
+* complete column set with the same symbols
+
+
+Class Game
+* its the game itself
+* will be created by 3 main inputs (playfield (max 1), player (max 3 including 1 AI), symbols (max 3))
+* randomly selects a player that starts with the first move
+* adds the given symbols to the given player
+* controls the moves of the player
+* gets the input of the player and sets the symbol in the playfield
+* validates user input
+* controls the auto movement of the bot player
+* prints the current playfield to the console
+* determines the winner and quits the game
+
+
+Class Player
+* its the player of the game
+* type human or AI
+* has a symbol
+* has a name
+
+
+Class Playfield
+* its the playfield of the game
+* generates the playfield with the given size
+* prints the playfield to the console
+* set symbol to given position of the player in the playfield
+* validate postions
+* validate if all poitions are set
+* validate if game is over / won
+* find empty position on playfield for auto moving the bot
+
+
+Design decisions
+I decided to create these 3 classes, because i think these are the 3 main "busines domains" in this scenario.
+We have a game that is played on a playfield by players.
+On the otherside, deviding this game into 3 pieces (classes) allows me to handle business logic and tests
+seperate from each other.
+So it is also possible, that in a team, more than one developer could work on the project at the same time.
